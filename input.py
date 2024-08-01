@@ -8,8 +8,8 @@ def fetch_arguments():
     parser.add_argument("--match", type=int, default=3, help="Score for a match")
     parser.add_argument("--mismatch", type=int, default=-3, help="Score for a mismatch")
     parser.add_argument("--gap", type=int, default=2, help="Score for a gap")
-    parser.add_argument("--top_sequence", type=str, default="TGTTACGG", help="Top sequence")
-    parser.add_argument("--bottom_sequence", type=str, default="GGTTGACTA", help="Bottom sequence")
+    parser.add_argument("--top_sequence", type=str, default="ATCTTTATC", help="Top sequence")
+    parser.add_argument("--bottom_sequence", type=str, default="ATCGGGATC", help="Bottom sequence")
     parser.add_argument("--sequence_file", type=str, help="Path to file containing sequences")
 
     args = parser.parse_args()
