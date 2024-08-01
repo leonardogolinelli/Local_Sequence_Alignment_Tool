@@ -10,7 +10,9 @@ def fetch_arguments():
     parser.add_argument("--gap", type=int, default=2, help="Score for a gap")
     parser.add_argument("--top_sequence", type=str, default="ATCTTTATC", help="Top sequence")
     parser.add_argument("--bottom_sequence", type=str, default="ATCGGGATC", help="Bottom sequence")
-    parser.add_argument("--sequence_file", type=str, help="Path to file containing sequences")
+    parser.add_argument("--sequence_file", type=str, help="""Path to file containing sequences,
+                                                            The first row should contain the top sequence,
+                                                            whereas the second row should contain the bottom sequence""")
 
     args = parser.parse_args()
 
