@@ -76,6 +76,8 @@ def write_alignment_fcn(
             print("")
 
         print("######### SCORE MATRIX #########")
+        if n_top_seqs > 1:
+            print(f"top_sequence number {num+1}")
         print("The alignment is highlighted with \"!\" symbols")
         draw_matrix_alignment(matrix, traceback_paths[key], key, top_sequence, bottom_sequence)
         print("")
