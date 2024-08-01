@@ -75,16 +75,17 @@ def write_alignment_fcn(
             print(f"Found {n_top_seqs} with the same (top) score")
             print("")
 
-        print("######### SCORE MATRIX #########")
+
         if n_top_seqs > 1:
+            print("")
             print(f"top_sequence number {num+1}")
+            print("")
+        print("######### SCORE MATRIX #########")
         print("The alignment is highlighted with \"!\" symbols")
         draw_matrix_alignment(matrix, traceback_paths[key], key, top_sequence, bottom_sequence)
         print("")
 
         print("######### ALIGNMENT RESULTS #########")
-        if n_top_seqs > 1:
-            print(f"top_sequence number {num+1}")
         print(f"max_score: {best_score}")
         print(f"alignment_length: {len(top_seq[::-1])}")
         print(top_seq[::-1])
